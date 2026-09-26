@@ -1,11 +1,597 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Portfólio - JULIA DE OLIVEIRA SILVERIO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Júlia Silvério — Portfólio | DSM Fatec Jacareí</title>
+  <meta name="description"
+    content="Portfólio de Júlia Silvério, estudante de Desenvolvimento de Software Multiplataforma na Fatec Jacareí.">
+  <meta name="author" content="Júlia Silvério">
+  <script>
+    try {
+      var tema = localStorage.getItem("julia-theme");
+      if (tema === "dark" || tema === "light") {
+        document.documentElement.setAttribute("data-theme", tema);
+      }
+    } catch (erro) { }
+
+    (function () {
+      var reduzido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      function encerrar() {
+        var tela = document.getElementById("loader");
+        if (!tela) return;
+        tela.classList.add("is-done");
+        window.setTimeout(function () { tela.remove(); }, 200);
+      }
+      if (reduzido) {
+        document.addEventListener("DOMContentLoaded", encerrar);
+        return;
+      }
+      var prazo = window.setTimeout(encerrar, 1200);
+      window.addEventListener("load", function () {
+        window.clearTimeout(prazo);
+        encerrar();
+      });
+    })();
+  </script>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/projects.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+
 <body>
-    <h1>Bem vindo ao Portfólio de JULIA DE OLIVEIRA SILVERIO</h1>
+  <a class="skip-link" href="#conteudo" data-i18n="nav.pular">Pular para o conteúdo</a>
+  <noscript>
+    <style>
+      .loader {
+        display: none !important
+      }
+    </style>
+  </noscript>
+
+  <div id="loader" class="loader" role="presentation" aria-hidden="true">
+    <p class="loader__label" data-i18n="loader.texto">CARREGANDO...</p>
+    <div class="progress loader__bar">
+      <span class="progress__fill loader__fill"></span>
+    </div>
+  </div>
+
+  <div class="bg-deco" aria-hidden="true">
+    <img class="bg-deco__item bg-deco__item--1" src="assets/img/deco/estrela.png" alt="" width="48" height="48"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--2" src="assets/img/deco/virus.png" alt="" width="96" height="75"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--3" src="assets/img/deco/estrela.png" alt="" width="32" height="32"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--4" src="assets/img/deco/estrela.png" alt="" width="64" height="64"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--5" src="assets/img/deco/virus.png" alt="" width="72" height="56"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--6" src="assets/img/deco/estrela.png" alt="" width="40" height="40"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--7" src="assets/img/deco/virus.png" alt="" width="64" height="50"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--8" src="assets/img/deco/estrela.png" alt="" width="32" height="32"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--9" src="assets/img/deco/virus.png" alt="" width="88" height="69"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--10" src="assets/img/deco/estrela.png" alt="" width="56" height="56"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--11" src="assets/img/deco/estrela.png" alt="" width="28" height="28"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--12" src="assets/img/deco/virus.png" alt="" width="56" height="44"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--13" src="assets/img/deco/estrela.png" alt="" width="36" height="36"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--14" src="assets/img/deco/virus.png" alt="" width="48" height="38"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--15" src="assets/img/deco/estrela.png" alt="" width="24" height="24"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--16" src="assets/img/deco/estrela.png" alt="" width="40" height="40"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--17" src="assets/img/deco/virus.png" alt="" width="52" height="41"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--18" src="assets/img/deco/estrela.png" alt="" width="32" height="32"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--19" src="assets/img/deco/virus.png" alt="" width="44" height="34"
+      loading="lazy">
+    <img class="bg-deco__item bg-deco__item--20" src="assets/img/deco/estrela.png" alt="" width="28" height="28"
+      loading="lazy">
+  </div>
+
+  <header class="navbar" id="navbar">
+    <a class="navbar__brand" href="#inicio">JULIA.EXE</a>
+
+    <button class="navbar__burger" id="burger" aria-expanded="false" aria-controls="menu"
+      data-i18n-attr="aria-label:nav.abrirMenu" aria-label="Abrir menu de navegação">
+      <span aria-hidden="true"></span>
+    </button>
+
+    <nav class="navbar__menu" id="menu" data-i18n-attr="aria-label:nav.principal" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#inicio" class="navbar__link is-active" aria-current="true" data-i18n="nav.inicio">INÍCIO</a></li>
+        <li><a href="#sobre" class="navbar__link" data-i18n="nav.sobre">SOBRE</a></li>
+        <li><a href="#projetos" class="navbar__link" data-i18n="nav.projetos">PROJETOS</a></li>
+        <li><a href="#extras" class="navbar__link" data-i18n="nav.extras">EXTRAS</a></li>
+        <li><a href="#contato" class="navbar__link" data-i18n="nav.contato">CONTATO</a></li>
+      </ul>
+    </nav>
+
+    <button class="navbar__lang" id="lang-toggle" type="button" aria-pressed="false" aria-label="Switch to English"
+      data-lang="pt">
+      <span class="navbar__lang-opt" aria-hidden="true">PT</span>
+      <span class="navbar__lang-knob" aria-hidden="true"></span>
+      <span class="navbar__lang-opt" aria-hidden="true">EN</span>
+    </button>
+
+    <button class="navbar__theme" id="theme-toggle" aria-pressed="false" aria-label="Alternar para tema escuro">
+      <span aria-hidden="true">◐</span>
+    </button>
+
+    <span class="navbar__controls" aria-hidden="true">▢ ✕</span>
+  </header>
+
+  <main id="conteudo">
+    <section id="inicio" class="hero reveal">
+      <div class="container">
+        <article class="window hero__window">
+          <div class="window__bar">
+            <span class="window__title">bem-vinda.exe</span>
+            <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+          </div>
+          <div class="window__body">
+            <h1 data-i18n-html="hero.titulo">Olá, eu sou a <span class="hero__name">Júlia</span>!</h1>
+            <h2 class="hero__subtitle" data-i18n="hero.subtitulo">Estudante de Desenvolvimento de Software
+              Multiplataforma na Fatec</h2>
+            <p class="hero__terminal"><span class="hero__caret" data-i18n="hero.terminal">&gt; escrevendo código,
+                aprendendo coisas novas e acumulando abas abertas no navegador</span></p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#projetos" data-i18n="hero.verProjetos">VER PROJETOS</a>
+              <a class="btn" href="#sobre" data-i18n="hero.sobreMim">SOBRE MIM</a>
+            </div>
+            <p class="hero__meta">
+              <span data-i18n="hero.local">São José dos Campos — SP</span>
+              <a class="hero__scroll" href="#sobre" data-i18n="hero.rolar">▼ ROLE PARA CONTINUAR</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre" class="reveal">
+      <div class="container">
+        <h2 data-i18n="sobre.titulo">Sobre</h2>
+        <div class="about__layout">
+          <article class="window portrait">
+            <div class="window__bar">
+              <span class="window__title">julia.png</span>
+              <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+            </div>
+            <div class="window__body">
+              <img src="assets/img/julia.png" data-i18n-attr="alt:sobre.fotoAlt" alt="Foto de Júlia Silvério"
+                width="460" height="460" loading="lazy">
+            </div>
+          </article>
+
+          <div>
+            <p data-i18n="sobre.apresentacao">Movida pela curiosidade, vejo cada projeto como uma oportunidade de
+              aprendizado. Tenho grande interesse por tecnologia e pelo processo de transformar problemas em soluções
+              através do código. Entre estudos, projetos e novas descobertas, sigo construindo minha trajetória na área
+              de desenvolvimento de software, sempre buscando evoluir minhas habilidades e acompanhar as constantes
+              mudanças do mundo da tecnologia.</p>
+            <h3 data-i18n="sobre.objetivosTitulo">Objetivos</h3>
+            <div class="bubble">
+              <p data-i18n="sobre.objetivos">Busco minha primeira oportunidade na área de desenvolvimento, com interesse
+                em desenvolvimento web full stack e em aprofundar backend com Node.js e bancos de dados relacionais.
+                Quero participar de projetos onde eu possa aprender com pessoas mais experientes e contribuir de verdade
+                com código.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills">
+          <article class="window">
+            <div class="window__bar">
+              <span class="window__title">autonomia.txt</span>
+              <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+            </div>
+            <div class="window__body">
+              <h3 data-i18n="sobre.autonomia">Uso com autonomia</h3>
+              <div class="progress" role="img" data-i18n-attr="aria-label:sobre.autonomiaAria"
+                aria-label="Uso com autonomia: nível 5 de 5">
+                <span class="progress__fill" style="--level: 5"></span>
+              </div>
+              <ul class="tag-list">
+                <li class="tag"><img src="assets/img/icons/html.svg" alt="" width="24" height="24">HTML5</li>
+                <li class="tag"><img src="assets/img/icons/css.svg" alt="" width="24" height="24">CSS3</li>
+                <li class="tag"><img src="assets/img/icons/js.svg" alt="" width="24" height="24">JavaScript</li>
+                <li class="tag"><img src="assets/img/icons/git.svg" alt="" width="24" height="24">Git</li>
+                <li class="tag"><img src="assets/img/icons/github.svg" alt="" width="24" height="24">GitHub</li>
+                <li class="tag"><img src="assets/img/icons/figma.svg" alt="" width="24" height="24">Figma</li>
+                <li class="tag"><img src="assets/img/icons/postgresql.svg" alt="" width="24" height="24">PostgreSQL</li>
+                <li class="tag"><img src="assets/img/icons/mysql.svg" alt="" width="24" height="24">MySQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="window">
+            <div class="window__bar">
+              <span class="window__title">pratica.txt</span>
+              <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+            </div>
+            <div class="window__body">
+              <h3 data-i18n="sobre.pratica">Em prática</h3>
+              <div class="progress" role="img" data-i18n-attr="aria-label:sobre.praticaAria"
+                aria-label="Em prática: nível 3 de 5">
+                <span class="progress__fill" style="--level: 3"></span>
+              </div>
+              <ul class="tag-list">
+                <li class="tag"><img src="assets/img/icons/ts.svg" alt="" width="24" height="24">TypeScript</li>
+                <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                <li class="tag"><img src="assets/img/icons/react.svg" alt="" width="24" height="24">React</li>
+                <li class="tag"><img src="assets/img/icons/docker.svg" alt="" width="24" height="24">Docker</li>
+                <li class="tag"><img src="assets/img/icons/ubuntu.svg" alt="" width="24" height="24">Ubuntu</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="window">
+            <div class="window__bar">
+              <span class="window__title">estudando.txt</span>
+              <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+            </div>
+            <div class="window__body">
+              <h3 data-i18n="sobre.estudando">Estudando agora</h3>
+              <div class="progress" role="img" data-i18n-attr="aria-label:sobre.estudandoAria"
+                aria-label="Estudando agora: nível 2 de 5">
+                <span class="progress__fill" style="--level: 2"></span>
+              </div>
+              <ul class="tag-list">
+                <li class="tag"><img src="assets/img/icons/python.svg" alt="" width="24" height="24">Python</li>
+              </ul>
+              <p class="stack-next" data-i18n="sobre.proximoNivel">Próximo nível em carregamento...</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="reveal">
+      <div class="container">
+        <h2 data-i18n="proj.titulo">Projetos</h2>
+
+        <div class="projects__group">
+          <h3 class="projects__category" data-i18n="proj.academicos">Acadêmicos</h3>
+          <div class="projects__grid">
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">sprint-master.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivel1dsm">LEVEL 01 · 1DSM – 1º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
+                <h3 class="project-card__name" data-i18n="proj.abp1.nome">Sprint Master</h3>
+                <p class="project-card__desc" data-i18n="proj.abp1.desc">Plataforma web desenvolvida pela equipe
+                  TechFellas na Fatec Jacareí, com a missão de facilitar o aprendizado de metodologias ágeis. O portal
+                  oferece atividades interativas para testar e validar o conhecimento em Scrum, emitindo certificado ao
+                  final dos módulos.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.abp1.contrib1">Atuação como desenvolvedora full stack, do design das telas à
+                      regra de negócio.</li>
+                    <li data-i18n="proj.abp1.contrib2">Design e desenvolvimento responsivo das interfaces e do dashboard
+                      do usuário.</li>
+                    <li data-i18n="proj.abp1.contrib3">Autenticação com senha e tokens, integrada ao banco de dados
+                      PostgreSQL.</li>
+                    <li data-i18n="proj.abp1.contrib4">Progressão de módulos e implementação das regras de negócio dos
+                      quizzes.</li>
+                    <li data-i18n="proj.abp1.contrib5">Refatoração da arquitetura backend com separação de
+                      responsabilidades, API RESTful e documentação do projeto.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/js.svg" alt="" width="24" height="24">JavaScript</li>
+                  <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                  <li class="tag"><img src="assets/img/icons/postgresql.svg" alt="" width="24" height="24">PostgreSQL
+                  </li>
+                  <li class="tag"><img src="assets/img/icons/html.svg" alt="" width="24" height="24">HTML5</li>
+                  <li class="tag"><img src="assets/img/icons/css.svg" alt="" width="24" height="24">CSS3</li>
+                  <li class="tag"><img src="assets/img/icons/figma.svg" alt="" width="24" height="24">Figma</li>
+                  <li class="tag"><img src="assets/img/icons/git.svg" alt="" width="24" height="24">Git</li>
+                  <li class="tag"><img src="assets/img/icons/github.svg" alt="" width="24" height="24">GitHub</li>
+                  <li class="tag">pgAdmin</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/TechFellasAbp/sprint-master" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
+
+            <article class="window project-card project-card--pending">
+              <div class="window__bar">
+                <span class="window__title">abp-2dsm.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivel2dsm">LEVEL 02 · 2DSM – 2º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
+                <span class="badge badge--status" data-i18n="proj.status">EM ANDAMENTO</span>
+                <h3 class="project-card__name" data-i18n="proj.abp2.nome">Projeto Integrador 2DSM</h3>
+                <p class="project-card__desc" data-i18n="proj.abp2.desc">O Projeto Integrador do 2º semestre está sendo
+                  realizado agora, ao longo do 2º semestre de 2026. Nome, descrição, tecnologias e repositório serão
+                  publicados aqui assim que o projeto for concluído.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.abp2.contrib">Em atualização — minha contribuição individual será descrita ao
+                      término das sprints.</li>
+                  </ul>
+                </div>
+                <div class="progress project-card__progress" role="img"
+                  data-i18n-attr="aria-label:proj.abp2.progressoAria" aria-label="Andamento do projeto: nível 1 de 5">
+                  <span class="progress__fill" style="--level: 1"></span>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag" data-i18n="proj.abp2.tag">Em definição</li>
+                </ul>
+                <p class="project-card__soon" data-i18n="proj.abp2.repo">Repositório em breve...</p>
+              </div>
+            </article>
+
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">web-page-at1.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivel1dsm">LEVEL 01 · 1DSM – 1º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
+                <h3 class="project-card__name">web-page-at1</h3>
+                <p class="project-card__desc" data-i18n="proj.at1.desc">Projeto web de autenticação utilizando Node.js,
+                  da disciplina de Desenvolvimento Web, com o objetivo de aprender a utilizar a biblioteca Express para
+                  criação de servidores e definição de rotas.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.at1.contrib1">Projeto individual: implementei todo o código.</li>
+                    <li data-i18n="proj.at1.contrib2">Servidor Express com variáveis de ambiente via dotenv e pasta de
+                      arquivos estáticos.</li>
+                    <li data-i18n="proj.at1.contrib3">Rotas para as páginas inicial, de login e de cadastro.</li>
+                    <li data-i18n="proj.at1.contrib4">Tratamento de rotas inválidas com página 404 personalizada.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/html.svg" alt="" width="24" height="24">HTML5</li>
+                  <li class="tag"><img src="assets/img/icons/css.svg" alt="" width="24" height="24">CSS3</li>
+                  <li class="tag"><img src="assets/img/icons/js.svg" alt="" width="24" height="24">JavaScript</li>
+                  <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                  <li class="tag"><img src="assets/img/icons/express.svg" alt="" width="24" height="24">Express</li>
+                  <li class="tag"><img src="assets/img/icons/git.svg" alt="" width="24" height="24">Git</li>
+                  <li class="tag"><img src="assets/img/icons/github.svg" alt="" width="24" height="24">GitHub</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev/web-page-at1" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
+
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">cep-http.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivel1dsm">LEVEL 01 · 1DSM – 1º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
+                <h3 class="project-card__name">At2-HTTP-request</h3>
+                <p class="project-card__desc" data-i18n="proj.at2.desc">Atividade prática de desenvolvimento web com o
+                  objetivo de construir uma página com HTML dinâmico e requisições HTTP para consulta de CEPs.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.at2.contrib1">Projeto individual: implementei todo o código.</li>
+                    <li data-i18n="proj.at2.contrib2">Consumo da API ViaCEP com fetch e async/await.</li>
+                    <li data-i18n="proj.at2.contrib3">Validação do CEP digitado e estados de carregamento, erro e sucesso
+                      na tela.</li>
+                    <li data-i18n="proj.at2.contrib4">Geração dinâmica do HTML com os dados do endereço e busca pela
+                      tecla Enter.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/html.svg" alt="" width="24" height="24">HTML5</li>
+                  <li class="tag"><img src="assets/img/icons/css.svg" alt="" width="24" height="24">CSS3</li>
+                  <li class="tag"><img src="assets/img/icons/js.svg" alt="" width="24" height="24">JavaScript</li>
+                  <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                  <li class="tag">Fetch API</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev/At2-HTTP-request" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="projects__group">
+          <h3 class="projects__category" data-i18n="proj.profissionaisTitulo">Profissionais</h3>
+          <p class="projects__note" data-i18n="proj.profissionais">
+            Em busca da primeira oportunidade — este espaço fica reservado para ela.
+          </p>
+        </div>
+
+        <div class="projects__group">
+          <h3 class="projects__category" data-i18n="proj.pessoais">Pessoais</h3>
+          <div class="projects__grid">
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">hello-word.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivelPessoal">LEVEL 01 · 1º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catPessoal">PESSOAL</span>
+                <h3 class="project-card__name">hello-word</h3>
+                <p class="project-card__desc" data-i18n="proj.hello.desc">Repositório criado para praticar o fluxo de
+                  trabalho do GitHub.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.hello.contrib">Criei o repositório e exercitei o ciclo completo de branch,
+                      commit, pull request e merge, incluindo a revisão de contribuições de colega, consolidando o fluxo
+                      de versionamento que passei a usar nos projetos seguintes.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/git.svg" alt="" width="24" height="24">Git</li>
+                  <li class="tag"><img src="assets/img/icons/github.svg" alt="" width="24" height="24">GitHub</li>
+                  <li class="tag">Markdown</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev/hello-word" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="projects__more">
+          <a class="btn" href="https://github.com/juliasilverio-dev" target="_blank" rel="noopener noreferrer"><span
+              data-i18n="proj.verTodos">VER TODOS OS REPOSITÓRIOS</span><span class="sr-only" data-i18n="proj.novaAba">
+              (abre em nova aba)</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="extras" class="reveal">
+      <div class="container">
+        <h2 data-i18n="extras.titulo">Extras</h2>
+        <!-- certificados.txt omitido: nenhuma certificação foi informada -->
+        <div class="extras__grid">
+          <article class="window">
+            <div class="window__bar">
+              <span class="window__title">formacao.txt</span>
+              <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+            </div>
+            <div class="window__body">
+              <h3 data-i18n="extras.formacao">Formação</h3>
+              <p data-i18n-html="extras.curso"><strong>Tecnólogo em Desenvolvimento de Software Multiplataforma</strong>
+                — Fatec Jacareí "Professor Francisco de Moura", 2026 – 2028, cursando.</p>
+              <p data-i18n="extras.anterior">Registros anteriores: Ensino Médio Integral (completo) — Escola Nelson do
+                Nascimento Monteiro, 2023 – 2025.</p>
+            </div>
+          </article>
+
+          <article class="window">
+            <div class="window__bar">
+              <span class="window__title">idiomas.txt</span>
+              <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+            </div>
+            <div class="window__body">
+              <h3 data-i18n="extras.idiomas">Idiomas</h3>
+              <ul class="extras__topics">
+                <li data-i18n="extras.portugues">Português (nativo)</li>
+                <li data-i18n="extras.ingles">Inglês (básico)</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="window">
+            <div class="window__bar">
+              <span class="window__title">hobbies.txt</span>
+              <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+            </div>
+            <div class="window__body">
+              <h3 data-i18n="extras.hobbies">Hobbies</h3>
+              <ul class="extras__topics">
+                <li data-i18n="extras.leitura">Leitura</li>
+                <li data-i18n="extras.pesquisa">Pesquisa</li>
+                <li data-i18n="extras.artes">Artes</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="reveal">
+      <div class="container">
+        <h2 data-i18n="contato.titulo">Contato</h2>
+        <div class="contact">
+          <article class="window contact__window">
+            <div class="window__bar">
+              <span class="window__title">contato.exe</span>
+              <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+            </div>
+            <div class="window__body">
+              <h3 data-i18n="contato.chamada">Vamos conversar?</h3>
+              <p data-i18n="contato.texto">Estou aberta a oportunidades, projetos e networking.</p>
+              <div class="contact__actions">
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev" target="_blank"
+                  rel="noopener noreferrer">
+                  <img src="assets/img/icons/github.svg" alt="" width="24" height="24">
+                  GITHUB
+                  <span class="sr-only" data-i18n="proj.novaAba">(abre em nova aba)</span>
+                </a>
+                <a class="btn" href="https://www.linkedin.com/in/j%C3%BAlia-silv%C3%A9rio-593b423b9" target="_blank"
+                  rel="noopener noreferrer">
+                  <img src="assets/img/icons/linkedin.svg" alt="" width="24" height="24">
+                  LINKEDIN
+                  <span class="sr-only" data-i18n="proj.novaAba">(abre em nova aba)</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__end" data-i18n="footer.fim">FIM DE JOGO — OBRIGADA POR JOGAR :)</p>
+      <nav class="footer__nav" data-i18n-attr="aria-label:nav.rodape" aria-label="Navegação do rodapé">
+        <ul>
+          <li><a class="navbar__link" href="#inicio" data-i18n="nav.inicio">INÍCIO</a></li>
+          <li><a class="navbar__link" href="#sobre" data-i18n="nav.sobre">SOBRE</a></li>
+          <li><a class="navbar__link" href="#projetos" data-i18n="nav.projetos">PROJETOS</a></li>
+          <li><a class="navbar__link" href="#extras" data-i18n="nav.extras">EXTRAS</a></li>
+          <li><a class="navbar__link" href="#contato" data-i18n="nav.contato">CONTATO</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <a class="btn btn--primary" href="https://github.com/juliasilverio-dev" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets/img/icons/github.svg" alt="" width="24" height="24">
+          GITHUB
+          <span class="sr-only" data-i18n="proj.novaAba">(abre em nova aba)</span>
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/j%C3%BAlia-silv%C3%A9rio-593b423b9" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets/img/icons/linkedin.svg" alt="" width="24" height="24">
+          LINKEDIN
+          <span class="sr-only" data-i18n="proj.novaAba">(abre em nova aba)</span>
+        </a>
+      </div>
+      <p class="footer__copy" data-i18n="footer.copy">© 2026 Júlia Silvério · Fatec Jacareí — DSM</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/reveal.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

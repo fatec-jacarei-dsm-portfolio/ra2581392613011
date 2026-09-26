@@ -1,0 +1,52 @@
+:root {
+  /* Tema pastel claro (padrão) */
+  --bg:            #EAF0FF;
+  --bg-grid:       #D3DEF7;
+  --surface:       #FDEBD3;
+  --surface-alt:   #FFF8EE;
+  --ink:           #3B2A25;
+  --ink-soft:      #6B554C;
+  --on-accent:     #3B2A25;
+
+  --lilac:         #B8AEE8;
+  --pink:          #F58BB4;
+  --mint:          #8FD8C4;
+  --yellow:        #F5C242;
+  --orange:        #E8834A;
+
+  --shadow:        rgba(59, 42, 37, 0.25);
+
+  --px:            4px;
+  --space-1:       4px;
+  --space-2:       8px;
+  --space-3:       16px;
+  --space-4:       24px;
+  --space-5:       40px;
+  --space-6:       64px;
+  --navbar-h:      64px;
+  --container:     1120px;
+
+  --font-display:  "Press Start 2P", "Courier New", monospace;
+  --font-pixel:    "VT323", "Courier New", monospace;
+  --font-body:     ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --step:          steps(2, end);
+}
+
+[data-theme="dark"] {
+  --bg:            #1B0B3B;
+  --bg-grid:       #2A1257;
+  --surface:       #3B1E7A;
+  --surface-alt:   #2A1257;
+  --ink:           #F2E9FF;
+  --ink-soft:      #C6B2EE;
+  --on-accent:     #1B0B3B;
+
+  --lilac:         #9D7BF5;
+  --pink:          #FF3DBE;
+  --mint:          #4EE8E0;
+  --yellow:        #FFD43B;
+  --orange:        #FF7A45;
+
+  --shadow:        rgba(0, 0, 0, 0.55);
+}
