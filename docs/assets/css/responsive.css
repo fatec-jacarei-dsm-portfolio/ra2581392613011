@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   html.js .navbar {
     flex-wrap: wrap;
   }
@@ -49,17 +49,38 @@
   .navbar {
     position: sticky;
   }
+}
 
-  section[id] {
-    padding-block: var(--space-4);
+@media (max-width: 767px) {
+  section[id],
+  #projetos,
+  #extras {
+    padding-block: var(--space-3);
   }
 
   #contato {
     min-height: 0;
   }
 
+  .hero {
+    min-height: 0;
+    padding-top: var(--space-3);
+  }
+
+  h2 {
+    margin-bottom: var(--space-3);
+  }
+
+  .window__body {
+    padding: var(--space-2);
+  }
+
   .projects__group + .projects__group {
-    margin-top: var(--space-4);
+    margin-top: var(--space-3);
+  }
+
+  .projects__category {
+    margin-bottom: var(--space-2);
   }
 
   .projects__grid,
@@ -68,13 +89,52 @@
     gap: var(--space-3);
     align-items: start;
   }
+
+  .project-card {
+    height: auto;
+  }
+
+  .project-card__contrib {
+    flex: none;
+    margin: var(--space-2) 0;
+    padding: 0;
+  }
+
+  .project-card__contrib > summary {
+    padding: 12px var(--space-2);
+  }
+
+  .project-card__contrib > ul {
+    padding: 0 var(--space-2) var(--space-2);
+  }
+
+  .project-card__name {
+    margin-top: var(--space-2);
+  }
+
+  .project-card__contrib li {
+    margin-bottom: var(--space-1);
+  }
+
+  .project-card .tag-list {
+    margin: var(--space-2) 0;
+  }
+
+  .projects__more {
+    margin-top: var(--space-3);
+  }
+
+  .skills {
+    margin-top: var(--space-3);
+  }
+
+  .footer {
+    margin-top: var(--space-2);
+    padding: var(--space-3) 0;
+  }
 }
 
 @media (min-width: 768px) {
-  .navbar__controls {
-    display: inline;
-  }
-
   .projects__grid,
   .extras__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -91,6 +151,10 @@
 }
 
 @media (min-width: 1024px) {
+  .navbar__controls {
+    display: inline;
+  }
+
   .about__layout {
     grid-template-columns: 280px minmax(0, 1fr);
   }
@@ -101,7 +165,8 @@
   }
 
   .skills,
-  .extras__grid {
+  .extras__grid,
+  .projects__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -111,10 +176,6 @@
 }
 
 @media (min-width: 1440px) {
-  .projects__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .hero h1 {
     font-size: 28px;
   }
@@ -183,7 +244,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   html:not(.js) .navbar {
     flex-wrap: wrap;
     height: auto;

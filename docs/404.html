@@ -4,10 +4,11 @@
   <script>
     (function () {
       if (location.protocol === "file:") return;
-      var seg = location.pathname.split("/").filter(Boolean)[0];
-      if (!seg || /\./.test(seg)) return;
+      var projeto = "/ra2581392613011/";
+      var noProjeto = location.pathname === projeto.slice(0, -1) ||
+        location.pathname.indexOf(projeto) === 0;
       var base = document.createElement("base");
-      base.href = "/" + seg + "/";
+      base.href = noProjeto ? projeto : "/";
       document.head.appendChild(base);
     })();
   </script>

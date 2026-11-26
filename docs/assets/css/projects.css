@@ -1,3 +1,16 @@
+.projects__group,
+.project-card {
+  min-width: 0;
+}
+
+#projetos {
+  padding-bottom: var(--space-4);
+}
+
+#extras {
+  padding-top: var(--space-4);
+}
+
 .projects__group + .projects__group {
   margin-top: var(--space-5);
 }
@@ -24,6 +37,11 @@
   gap: var(--space-4);
   grid-template-columns: 1fr;
   align-items: start;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card .badge {
@@ -58,9 +76,28 @@
 
 .project-card__contrib {
   margin: var(--space-3) 0;
-  padding: var(--space-3);
+  padding: 0;
   background: var(--surface-alt);
   box-shadow: inset 4px 0 0 0 var(--pink);
+}
+
+.project-card__contrib > summary {
+  min-height: 44px;
+  padding: var(--space-3);
+  cursor: pointer;
+}
+
+.project-card__contrib > summary::marker {
+  color: var(--ink-soft);
+}
+
+.project-card__contrib > summary:focus-visible {
+  outline: 2px dashed var(--ink);
+  outline-offset: -4px;
+}
+
+.project-card__contrib > ul {
+  padding: 0 var(--space-3) var(--space-3);
 }
 
 .project-card__label {

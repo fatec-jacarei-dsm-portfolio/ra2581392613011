@@ -93,6 +93,12 @@
   min-height: 70vh;
 }
 
+@media (max-width: 767px) {
+  #contato {
+    min-height: 0;
+  }
+}
+
 .contact {
   display: grid;
   justify-items: center;

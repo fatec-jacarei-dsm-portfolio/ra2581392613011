@@ -8,7 +8,7 @@ function setActive(id) {
 }
 
 function isMobileNav() {
-  return window.matchMedia("(max-width: 767px)").matches;
+  return window.matchMedia("(max-width: 1023px)").matches;
 }
 
 function prefersReducedMotion() {
@@ -61,6 +61,9 @@ function initScrollSpy() {
     for (const section of sections) {
       if (section.getBoundingClientRect().top <= line) current = section.id;
     }
+    // No celular, a última seção pode terminar antes de alcançar a linha de ativação.
+    const atBottom = Math.ceil(window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight;
+    if (atBottom) current = sections[sections.length - 1].id;
     setActive(current);
   };
 
@@ -170,7 +173,7 @@ function initNav() {
     }
   });
 
-  window.matchMedia("(min-width: 768px)").addEventListener("change", (event) => {
+  window.matchMedia("(min-width: 1024px)").addEventListener("change", (event) => {
     if (event.matches) close(false);
   });
 
