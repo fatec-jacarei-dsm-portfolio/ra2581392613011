@@ -23,6 +23,7 @@
   display: grid;
   gap: var(--space-4);
   grid-template-columns: 1fr;
+  align-items: start;
 }
 
 .project-card .badge {

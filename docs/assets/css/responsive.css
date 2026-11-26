@@ -49,6 +49,25 @@
   .navbar {
     position: sticky;
   }
+
+  section[id] {
+    padding-block: var(--space-4);
+  }
+
+  #contato {
+    min-height: 0;
+  }
+
+  .projects__group + .projects__group {
+    margin-top: var(--space-4);
+  }
+
+  .projects__grid,
+  .extras__grid,
+  .skills {
+    gap: var(--space-3);
+    align-items: start;
+  }
 }
 
 @media (min-width: 768px) {
