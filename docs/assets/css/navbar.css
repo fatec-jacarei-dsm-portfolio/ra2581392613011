@@ -46,7 +46,7 @@
   text-decoration: none;
   background: transparent;
   border-radius: 0;
-  transition: background-color 120ms var(--step);
+  transition: background-color 60ms var(--step);
 }
 
 .navbar__link:hover {

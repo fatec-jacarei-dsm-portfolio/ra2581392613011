@@ -32,6 +32,7 @@
 .project-card__name {
   margin-top: var(--space-3);
   font-size: 22px;
+  overflow-wrap: anywhere;
 }
 
 .project-card__desc {

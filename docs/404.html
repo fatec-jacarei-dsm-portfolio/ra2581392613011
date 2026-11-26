@@ -5,8 +5,9 @@
     (function () {
       if (location.protocol === "file:") return;
       var seg = location.pathname.split("/").filter(Boolean)[0];
+      if (!seg || /\./.test(seg)) return;
       var base = document.createElement("base");
-      base.href = seg ? "/" + seg + "/" : "/";
+      base.href = "/" + seg + "/";
       document.head.appendChild(base);
     })();
   </script>

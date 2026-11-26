@@ -236,7 +236,9 @@
               <ul class="tag-list">
                 <li class="tag"><img src="assets/img/icons/ts.svg" alt="" width="24" height="24">TypeScript</li>
                 <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                <li class="tag"><img src="assets/img/icons/express.svg" alt="" width="24" height="24">Express</li>
                 <li class="tag"><img src="assets/img/icons/react.svg" alt="" width="24" height="24">React</li>
+                <li class="tag">Vite</li>
                 <li class="tag"><img src="assets/img/icons/docker.svg" alt="" width="24" height="24">Docker</li>
                 <li class="tag"><img src="assets/img/icons/ubuntu.svg" alt="" width="24" height="24">Ubuntu</li>
               </ul>
@@ -256,6 +258,7 @@
               </div>
               <ul class="tag-list">
                 <li class="tag"><img src="assets/img/icons/python.svg" alt="" width="24" height="24">Python</li>
+                <li class="tag">Flask</li>
               </ul>
               <p class="stack-next" data-i18n="sobre.proximoNivel">Próximo nível em carregamento...</p>
             </div>
@@ -317,34 +320,51 @@
               </div>
             </article>
 
-            <article class="window project-card project-card--pending">
+            <article class="window project-card">
               <div class="window__bar">
-                <span class="window__title">abp-2dsm.exe</span>
+                <span class="window__title">greener.exe</span>
                 <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
               </div>
               <div class="window__body">
                 <span class="badge badge--level" data-i18n="proj.nivel2dsm">LEVEL 02 · 2DSM – 2º Sem. 2026</span>
                 <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
-                <span class="badge badge--status" data-i18n="proj.status">EM ANDAMENTO</span>
-                <h3 class="project-card__name" data-i18n="proj.abp2.nome">Projeto Integrador 2DSM</h3>
-                <p class="project-card__desc" data-i18n="proj.abp2.desc">O Projeto Integrador do 2º semestre está sendo
-                  realizado agora, ao longo do 2º semestre de 2026. Nome, descrição, tecnologias e repositório serão
-                  publicados aqui assim que o projeto for concluído.</p>
+                <h3 class="project-card__name" data-i18n="proj.abp2.nome">GreenER</h3>
+                <p class="project-card__desc" data-i18n="proj.abp2.desc">Plataforma web desenvolvida pela equipe
+                  Green Stack na Fatec Jacareí para estimar o impacto ambiental de aplicações de software. O sistema
+                  coleta métricas de infraestrutura (CPU, memória, disco e rede), estima o consumo de energia e, com a
+                  intensidade de carbono da região do serviço, calcula as emissões de CO₂ equivalente (CO₂e).</p>
                 <div class="project-card__contrib">
                   <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
                   <ul>
-                    <li data-i18n="proj.abp2.contrib">Em atualização — minha contribuição individual será descrita ao
-                      término das sprints.</li>
+                    <li data-i18n="proj.abp2.contrib1">Integração do backend com as APIs de métricas e de intensidade de
+                      carbono, com mocks locais e tratamento de erros e timeouts.</li>
+                    <li data-i18n="proj.abp2.contrib2">Autenticação com JWT: login, cadastro de usuários, limite de
+                      tentativas e proteção das rotas de coleta e do dashboard.</li>
+                    <li data-i18n="proj.abp2.contrib3">Persistência de serviços e coletas no PostgreSQL e rotina de
+                      coleta periódica das métricas.</li>
+                    <li data-i18n="proj.abp2.contrib4">Detecção de serviços indisponíveis, ativos sem métricas, incluídos
+                      e removidos.</li>
+                    <li data-i18n="proj.abp2.contrib5">Tela de ranking por energia e CO₂e com filtros, além de ajustes de
+                      responsividade mobile e acessibilidade.</li>
+                    <li data-i18n="proj.abp2.contrib6">Testes automatizados, ambiente com Docker Compose e documentação
+                      da API e do projeto.</li>
                   </ul>
                 </div>
-                <div class="progress project-card__progress" role="img"
-                  data-i18n-attr="aria-label:proj.abp2.progressoAria" aria-label="Andamento do projeto: nível 1 de 5">
-                  <span class="progress__fill" style="--level: 1"></span>
-                </div>
                 <ul class="tag-list">
-                  <li class="tag" data-i18n="proj.abp2.tag">Em definição</li>
+                  <li class="tag"><img src="assets/img/icons/ts.svg" alt="" width="24" height="24">TypeScript</li>
+                  <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                  <li class="tag"><img src="assets/img/icons/react.svg" alt="" width="24" height="24">React</li>
+                  <li class="tag"><img src="assets/img/icons/postgresql.svg" alt="" width="24" height="24">PostgreSQL</li>
+                  <li class="tag"><img src="assets/img/icons/docker.svg" alt="" width="24" height="24">Docker</li>
+                  <li class="tag"><img src="assets/img/icons/figma.svg" alt="" width="24" height="24">Figma</li>
+                  <li class="tag"><img src="assets/img/icons/git.svg" alt="" width="24" height="24">Git</li>
+                  <li class="tag"><img src="assets/img/icons/github.svg" alt="" width="24" height="24">GitHub</li>
+                  <li class="tag">Vite</li>
+                  <li class="tag">JWT</li>
                 </ul>
-                <p class="project-card__soon" data-i18n="proj.abp2.repo">Repositório em breve...</p>
+                <a class="btn btn--primary" href="https://github.com/greenstackfatec-tech/greener" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
               </div>
             </article>
 
@@ -419,6 +439,188 @@
                     data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
               </div>
             </article>
+
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">web-page-at3.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivel1dsm">LEVEL 01 · 1DSM – 1º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
+                <h3 class="project-card__name">web-page-at3</h3>
+                <p class="project-card__desc" data-i18n="proj.at3.desc">Aplicação web para gerenciamento de usuários, com
+                  cadastro, listagem em ordem alfabética e exclusão de registros.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.at3.contrib1">Projeto individual: implementei todo o código.</li>
+                    <li data-i18n="proj.at3.contrib2">API com Express: rotas para listar, cadastrar e excluir
+                      usuários.</li>
+                    <li data-i18n="proj.at3.contrib3">Persistência no PostgreSQL, com conexão configurada por variáveis
+                      de ambiente.</li>
+                    <li data-i18n="proj.at3.contrib4">Interface em HTML, CSS e JavaScript integrada à API.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/html.svg" alt="" width="24" height="24">HTML5</li>
+                  <li class="tag"><img src="assets/img/icons/css.svg" alt="" width="24" height="24">CSS3</li>
+                  <li class="tag"><img src="assets/img/icons/js.svg" alt="" width="24" height="24">JavaScript</li>
+                  <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                  <li class="tag"><img src="assets/img/icons/express.svg" alt="" width="24" height="24">Express</li>
+                  <li class="tag"><img src="assets/img/icons/postgresql.svg" alt="" width="24" height="24">PostgreSQL</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev/web-page-at3" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
+
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">mega-sena.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivel1dsm">LEVEL 01 · 1DSM – 1º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
+                <h3 class="project-card__name">At4-MegaSena</h3>
+                <p class="project-card__desc" data-i18n="proj.at4.desc">Aplicação web para cadastro e visualização de
+                  jogos da Mega-Sena, com validação de dezenas e armazenamento em PostgreSQL.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.at4.contrib1">Projeto individual: implementei todo o código.</li>
+                    <li data-i18n="proj.at4.contrib2">Validação de seis dezenas distintas entre 1 e 60, feita na
+                      interface e na API.</li>
+                    <li data-i18n="proj.at4.contrib3">Rotas com Express para cadastrar e listar os jogos, do mais recente
+                      para o mais antigo, com persistência no PostgreSQL.</li>
+                    <li data-i18n="proj.at4.contrib4">Testes da API e de integração com o banco de dados.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/html.svg" alt="" width="24" height="24">HTML5</li>
+                  <li class="tag"><img src="assets/img/icons/css.svg" alt="" width="24" height="24">CSS3</li>
+                  <li class="tag"><img src="assets/img/icons/js.svg" alt="" width="24" height="24">JavaScript</li>
+                  <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                  <li class="tag"><img src="assets/img/icons/express.svg" alt="" width="24" height="24">Express</li>
+                  <li class="tag"><img src="assets/img/icons/postgresql.svg" alt="" width="24" height="24">PostgreSQL</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev/At4-MegaSena" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
+
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">python-estudos.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivel2dsm">LEVEL 02 · 2DSM – 2º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
+                <h3 class="project-card__name">estudos-fundamentos-python</h3>
+                <p class="project-card__desc" data-i18n="proj.py.desc">Exercícios de Python desenvolvidos em aula: análise
+                  de números com Matplotlib, combinações de listas e parâmetros de URL com Flask.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.py.contrib1">Atividade individual: implementei os três exercícios.</li>
+                    <li data-i18n="proj.py.contrib2">Cálculo de maior valor, menor valor e média, com gráfico em
+                      Matplotlib destacando os extremos.</li>
+                    <li data-i18n="proj.py.contrib3">Geração de todos os pares possíveis de uma lista com compreensão de
+                      listas.</li>
+                    <li data-i18n="proj.py.contrib4">Rota em Flask que lê um parâmetro da URL e exibe o texto na
+                      página.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/python.svg" alt="" width="24" height="24">Python</li>
+                  <li class="tag">Matplotlib</li>
+                  <li class="tag">Flask</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev/estudos-fundamentos-python" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
+
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">web2-dependencia.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivel2dsm">LEVEL 02 · 2DSM – 2º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
+                <h3 class="project-card__name">atv-webII-dependencia</h3>
+                <p class="project-card__desc" data-i18n="proj.web2.desc">Atividade de Web II: refatoração de uma API
+                  Express com TypeScript e PostgreSQL, aplicando injeção de dependência manual nos módulos de cursos e
+                  matrículas.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.web2.contrib1">Atividade individual sobre o projeto base do professor: refatorei
+                      os módulos de cursos e matrículas seguindo o exemplo do módulo de alunos.</li>
+                    <li data-i18n="proj.web2.contrib2">Criação dos contratos CourseRepository e EnrollmentRepository.</li>
+                    <li data-i18n="proj.web2.contrib3">Injeção do banco nos repositórios, dos repositórios nos serviços e
+                      dos serviços nas rotas.</li>
+                    <li data-i18n="proj.web2.contrib4">Montagem das dependências em um único ponto da aplicação,
+                      preservando o comportamento da API.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/ts.svg" alt="" width="24" height="24">TypeScript</li>
+                  <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                  <li class="tag"><img src="assets/img/icons/express.svg" alt="" width="24" height="24">Express</li>
+                  <li class="tag"><img src="assets/img/icons/postgresql.svg" alt="" width="24" height="24">PostgreSQL</li>
+                  <li class="tag"><img src="assets/img/icons/docker.svg" alt="" width="24" height="24">Docker</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev/atv-webII-dependencia" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
+
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">jaccard.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivel2dsm">LEVEL 02 · 2DSM – 2º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catAcademico">ACADÊMICO</span>
+                <h3 class="project-card__name">similaridade-jaccard</h3>
+                <p class="project-card__desc" data-i18n="proj.jaccard.desc">Aplicação web que compara dois textos pela
+                  similaridade de Jaccard e mostra o percentual, as palavras em comum e as exclusivas de cada documento.
+                  Inclui um exemplo de uso na identificação de possíveis plágios e a discussão das limitações do
+                  método.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.jaccard.contrib1">Projeto individual: implementei todo o código.</li>
+                    <li data-i18n="proj.jaccard.contrib2">Cálculo do índice com conjuntos: normalização das palavras,
+                      interseção e união.</li>
+                    <li data-i18n="proj.jaccard.contrib3">Rotas em Flask para o formulário e a comparação, com validação
+                      das entradas e limite de tamanho.</li>
+                    <li data-i18n="proj.jaccard.contrib4">Páginas em HTML e CSS com templates Jinja e testes automatizados
+                      com pytest.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/python.svg" alt="" width="24" height="24">Python</li>
+                  <li class="tag"><img src="assets/img/icons/html.svg" alt="" width="24" height="24">HTML5</li>
+                  <li class="tag"><img src="assets/img/icons/css.svg" alt="" width="24" height="24">CSS3</li>
+                  <li class="tag">Flask</li>
+                  <li class="tag">Jinja</li>
+                  <li class="tag">pytest</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev/similaridade-jaccard" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
           </div>
         </div>
 
@@ -461,6 +663,46 @@
                     data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
               </div>
             </article>
+
+            <article class="window project-card">
+              <div class="window__bar">
+                <span class="window__title">atende.exe</span>
+                <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+              </div>
+              <div class="window__body">
+                <span class="badge badge--level" data-i18n="proj.nivelPessoal">LEVEL 01 · 1º Sem. 2026</span>
+                <span class="badge badge--category" data-i18n="proj.catPessoal">PESSOAL</span>
+                <h3 class="project-card__name">Atende</h3>
+                <p class="project-card__desc" data-i18n="proj.atende.desc">Sistema web de senhas e gestão de filas para
+                  consultas, exames e agendamentos. São três telas ligadas à mesma API (totem, painel e atendimento),
+                  respeitando a prioridade do atendimento preferencial e a ordem de geração das senhas.</p>
+                <div class="project-card__contrib">
+                  <h4 class="project-card__label" data-i18n="proj.contribuicao">Minha contribuição</h4>
+                  <ul>
+                    <li data-i18n="proj.atende.contrib1">Projeto individual: implementei todo o código.</li>
+                    <li data-i18n="proj.atende.contrib2">Implementação própria de filas FIFO encadeadas (nó e fila), com
+                      inserção e retirada em O(1).</li>
+                    <li data-i18n="proj.atende.contrib3">API com Express e TypeScript que emite senhas com código
+                      aleatório sem repetição e chama a próxima, priorizando as preferenciais e mantendo a ordem de
+                      chegada.</li>
+                    <li data-i18n="proj.atende.contrib4">Interface em React com totem, painel com atualização automática
+                      e tela de atendimento.</li>
+                    <li data-i18n="proj.atende.contrib5">Testes do backend para prioridade, ordem de chegada, colisão de
+                      códigos e chamadas simultâneas.</li>
+                  </ul>
+                </div>
+                <ul class="tag-list">
+                  <li class="tag"><img src="assets/img/icons/ts.svg" alt="" width="24" height="24">TypeScript</li>
+                  <li class="tag"><img src="assets/img/icons/react.svg" alt="" width="24" height="24">React</li>
+                  <li class="tag"><img src="assets/img/icons/node.svg" alt="" width="24" height="24">Node.js</li>
+                  <li class="tag"><img src="assets/img/icons/express.svg" alt="" width="24" height="24">Express</li>
+                  <li class="tag">Vite</li>
+                </ul>
+                <a class="btn btn--primary" href="https://github.com/juliasilverio-dev/sistema-atendimento-gestao-filas-web" target="_blank"
+                  rel="noopener noreferrer"><span data-i18n="proj.verRepo">VER REPOSITÓRIO</span><span class="sr-only"
+                    data-i18n="proj.novaAba"> (abre em nova aba)</span></a>
+              </div>
+            </article>
           </div>
         </div>
 
@@ -475,7 +717,6 @@
     <section id="extras" class="reveal">
       <div class="container">
         <h2 data-i18n="extras.titulo">Extras</h2>
-        <!-- certificados.txt omitido: nenhuma certificação foi informada -->
         <div class="extras__grid">
           <article class="window">
             <div class="window__bar">
@@ -488,6 +729,21 @@
                 — Fatec Jacareí "Professor Francisco de Moura", 2026 – 2028, cursando.</p>
               <p data-i18n="extras.anterior">Registros anteriores: Ensino Médio Integral (completo) — Escola Nelson do
                 Nascimento Monteiro, 2023 – 2025.</p>
+            </div>
+          </article>
+
+          <article class="window">
+            <div class="window__bar">
+              <span class="window__title">cursos.txt</span>
+              <span class="window__controls" aria-hidden="true">_ ▢ ✕</span>
+            </div>
+            <div class="window__body">
+              <h3 data-i18n="extras.cursos">Cursos</h3>
+              <ul class="extras__topics">
+                <li data-i18n="extras.cursoIt">IT Essentials — Cisco Networking Academy</li>
+                <li data-i18n="extras.cursoGit">Curso básico de Git — Cursa</li>
+                <li data-i18n="extras.cursoNode">Desenvolvendo em Node.js — TIC em Trilhas</li>
+              </ul>
             </div>
           </article>
 
@@ -542,7 +798,7 @@
                   GITHUB
                   <span class="sr-only" data-i18n="proj.novaAba">(abre em nova aba)</span>
                 </a>
-                <a class="btn" href="https://www.linkedin.com/in/j%C3%BAlia-silv%C3%A9rio-593b423b9" target="_blank"
+                <a class="btn" href="https://www.linkedin.com/in/juliaoliveirasilverio" target="_blank"
                   rel="noopener noreferrer">
                   <img src="assets/img/icons/linkedin.svg" alt="" width="24" height="24">
                   LINKEDIN
@@ -575,7 +831,7 @@
           GITHUB
           <span class="sr-only" data-i18n="proj.novaAba">(abre em nova aba)</span>
         </a>
-        <a class="btn" href="https://www.linkedin.com/in/j%C3%BAlia-silv%C3%A9rio-593b423b9" target="_blank"
+        <a class="btn" href="https://www.linkedin.com/in/juliaoliveirasilverio" target="_blank"
           rel="noopener noreferrer">
           <img src="assets/img/icons/linkedin.svg" alt="" width="24" height="24">
           LINKEDIN
